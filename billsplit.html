@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An advanced bill splitter application that allows users to calculate the amount each person needs to pay, including tips.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Advanced Bill Splitter</title>
+</head>
+<body class="bg-gray-900">
+    <div class="border p-5 rounded-lg bg-gray-800">
+        <h1 class="text-3xl font-bold text-center m-5 p-3 text-white">BILL SPLITTER</h1>
+    </div>
+    <div class="border p-5 rounded-lg bg-gray-800 text-white my-5 flex flex-col font-sans text-lg">
+        <p class="text-left text-lg font-sans m-3 p-2 text-white">Thanks for using Bill Splitter. Please fill up the informations required below:</p>
+        <label for="billAmount" class="mx-3 px-2">Bill amount:</label>
+        <input type="number" id="billAmount" min="0" class="border p-2 m-3 rounded-full w-64 text-black"><br>
+        <label for="numPeople" class="mx-3 px-2">Number of people:</label>
+        <input type="number" id="numPeople" min="0" class="border p-2 m-3 rounded-full w-64 text-black"><br>
+        <label for="tipPercentage" class="mx-3 px-2">Tip percentage:</label>
+        <input type="number" id="tipPercentage" min="0" class="border p-2 m-3 rounded-full w-64 text-black"><br>
+        <label for="tipType" class="mx-3 px-2">Tip type:</label>
+        <select id="tipType" class="border p-2 m-3 rounded-full w-64 text-black">
+            <option value="percentage">Percentage</option>
+            <option value="cash">cash</option>
+        </select>
+        <div class="flex justify-center my-5">
+            <button aria-label="Calculate" id="calculateBtn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold m-5 py-3 px-4 rounded-full text-center w-64">Calculate</button>
+            <button aria-label="Reset" id="resetBtn" class="bg-red-500 hover:bg-red-700 text-white font-bold m-3 py-2 px-2 rounded-full text-center w-40">Reset</button>
+        </div>
+        <div>
+            <p id="result" class="text-left text-lg font-bold m-3 p-2 text-white"></p>
+        </div>
+    </div> >
+    <footer class="border p-5 rounded-lg bg-gray-800 text-white my-5 flex flex-col font-bold text-lg">
+        <p> Made by Sadman, &copy; 2026</p>
+        <p>All rights reserved.</p>
+        <p>Contact: sadmanahon9@gmail.com</p>
+    </footer>
+    <script src="billsplit.js"></script>
+</body>
+</html>
